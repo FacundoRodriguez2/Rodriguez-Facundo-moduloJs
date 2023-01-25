@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 #Htitle{
     background-color: lightgray;
     display: flex;
@@ -5,4 +11,21 @@
     height: 8rem;
     justify-content: center;
     align-items: center;
+}
+
+#catcontent{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+#formsec{
+    width: 20rem;
+    
+}
+
+#cardcontent{
+    display: flex;
+    justify-content: space-around;
+    
 }
