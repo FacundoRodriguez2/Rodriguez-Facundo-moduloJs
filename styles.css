@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-around;
     margin: 1rem;
+    flex-wrap: wrap;
 }
 
 #formsec{
@@ -27,5 +28,17 @@
 #cardcontent{
     display: flex;
     justify-content: space-around;
-    
+    flex-wrap: wrap;
+}
+
+footer{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+#social{
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 2rem;
 }
