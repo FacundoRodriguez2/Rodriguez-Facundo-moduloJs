@@ -4,6 +4,17 @@
     margin: 0;
 }
 
+
+header{
+    min-height: 15vh;
+
+}
+main{
+    min-height: 75vh;
+}
+
+
+
 #Htitle{
     background-color: lightgray;
     display: flex;
@@ -32,13 +43,73 @@
 }
 
 footer{
+    min-height: 10vh;
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: lightgray;
 }
 #social{
     display: flex;
     margin-top: 0.5rem;
     gap: 2rem;
+}
+#contacform{
+    display: flex;
+    margin-top: 10rem;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 50rem;
+}
+#tables{
+    
+    margin-top: 2rem;
+}
+table,tr,th,td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.cardbottom{
+    display: flex;
+    justify-content: space-between;
+}
+caption{
+    caption-side: top;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightgray;
+    font-size: large;
+    color: black;
+}
+#maindetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#detailscontent{
+    display: flex;
+    width: 70rem;
+    height: 30rem;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+}
+#detailsimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 20rem;
+
+}
+#imgdetails{
+    width: 38rem;
+    height: 20rem;
+}
+#detailstext{
+    border: 1px solid black;
 }

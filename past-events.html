@@ -13,9 +13,9 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                
                 <img src="./assets/Logo Amazing Events.png" alt="Bootstrap" width="100" height="60">
-                </a>
+                
                 <div class="d-flex" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
@@ -42,35 +42,42 @@
           </div>
     </header>
     <main>
-        <div id="catcontent">
-          <div id="cate">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Category</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Category</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Category</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Category</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Category</label>
-              </div>
-            
+      <div id="catcontent">
+        <div id="cate">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Food Fair</label>
             </div>
-            <form class="d-flex" role="search" id="formsec">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">Museum</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+              <label class="form-check-label" for="inlineCheckbox3">Costume Party</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+              <label class="form-check-label" for="inlineCheckbox4">Music Concert</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+              <label class="form-check-label" for="inlineCheckbox5">Race</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+              <label class="form-check-label" for="inlineCheckbox6">Book Exchange</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+              <label class="form-check-label" for="inlineCheckbox7">Let's go to the cinema</label>
+            </div>
+          </div>
+          <form class="d-flex" role="search" id="formsec">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+      </div>
 
         <div id="cardcontent">
           <div class="card" style="width: 18rem;">
@@ -79,12 +86,12 @@
               <h5 class="card-title"> 10K for life </h5>
               <p class="card-text"><strong>Date:</strong>2021-03-01 </p>
               <p class="card-text"><strong>Description:</strong>Come and exercise, improve your health and lifestyle.</p>
-              <p class="card-text"><strong>Category:</strong>Race </p>
-              <p class="card-text"><strong>Place:</strong>Soccer Field </p>
-              <p class="card-text"><strong>Capacity:</strong>30000 </p>
-              <p class="card-text"><strong>Assistance:</strong> 25698</p>
-              <p class="card-text"><strong>Price:</strong>3</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              
+              <div class="cardbottom">
+                <p class="card-text"><strong>Price:</strong>3 USD</p>
+                <a href="./details.html" class="btn btn-primary">Go to details</a>
+            </div>
+              
             </div>
           </div>
           <div class="card" style="width: 18rem;">
@@ -93,12 +100,12 @@
               <h5 class="card-title">School Book Fair </h5>
               <p class="card-text"><strong>Date:</strong>2021-10-15 </p>
               <p class="card-text"><strong>Description:</strong>Bring your unused school book and bring the one you need. </p>
-              <p class="card-text"><strong>Category:</strong>Book Exchange </p>
-              <p class="card-text"><strong>Place:</strong>Room D1 </p>
-              <p class="card-text"><strong>Capacity:</strong>150000 </p>
-              <p class="card-text"><strong>Assistance:</strong>123286 </p>
-              <p class="card-text"><strong>Price:</strong>1 </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+             
+              <div class="cardbottom">
+                <p class="card-text"><strong>Price:</strong>1 </p>
+                <a href="./details.html" class="btn btn-primary">Go to details</a>
+            </div>
+              
             </div>
           </div>
           <div class="card" style="width: 18rem;">
@@ -107,26 +114,26 @@
               <h5 class="card-title">Avengers</h5>
               <p class="card-text"><strong>Date:</strong>2022-10-15</p>
               <p class="card-text"><strong>Description:</strong>Marvel's Avengers 3d premiere the start of an epic saga with your best superheroes</p>
-              <p class="card-text"><strong>Category:</strong>Let's go to the cinema</p>
-              <p class="card-text"><strong>Place:</strong>Room D1</p>
-              <p class="card-text"><strong>Capacity:</strong>9000</p>
-              <p class="card-text"><strong>Estimate:</strong>9000</p>
-              <p class="card-text"><strong>Price:</strong>250</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              
+              <div class="cardbottom">
+                <p class="card-text"><strong>Price:</strong>250</p>
+                <a href="./details.html" class="btn btn-primary">Go to details</a>
+            </div>
+              
             </div>
           </div>
           <div class="card" style="width: 18rem;">
             <img src="./assets/Concierto de musica1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Metallica in concert</h5>
               <p class="card-text"><strong>Date:</strong>2022-01-22</p>
               <p class="card-text"><strong>Description:</strong>The only concert of the most emblematic band in the world</p>
-              <p class="card-text"><strong>Category:</strong>Music Concert</p>
-              <p class="card-text"><strong>Place:</strong>Room A</p>
-              <p class="card-text"><strong>Capacity:</strong>138000</p>
-              <p class="card-text"><strong>Estimate:</strong>138000</p>
-              <p class="card-text"><strong>Price:</strong>150</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              
+              <div class="cardbottom">
+                <p class="card-text"><strong>Price:</strong>150</p>
+                <a href="./details.html" class="btn btn-primary">Go to details</a>
+            </div>
+              
             </div>
           </div>
         </div>
