@@ -36,10 +36,11 @@ main{
     
 }
 
-#cardcontent{
+#cards{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 footer{
@@ -65,10 +66,11 @@ form{
     width: 50rem;
 }
 #tables{
-    
-    margin-top: 2rem;
+    width: 115rem;
+    margin: 2rem;
 }
 table,tr,th,td{
+    
     text-align: center;
     border: 1px solid black;
     border-collapse: collapse;
