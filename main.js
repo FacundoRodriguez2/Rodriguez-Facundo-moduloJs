@@ -13,7 +13,7 @@ for(let idInfo of eventInfo){
       <p class="card-text"><strong>Description:</strong>${idInfo.description}</p>
       <div class="cardbottom">
         <p class="card-text"><strong>Price:</strong>$${idInfo.price}</p>
-        <a href="./details.html" class="btn btn-primary">Go to details</a>
+        <a href="./pages/details.html" class="btn btn-primary">Go to details</a>
       </div>
     </div>
   </div>`

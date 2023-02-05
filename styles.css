@@ -12,6 +12,9 @@ header{
 main{
     min-height: 75vh;
 }
+#navbarNav{
+    justify-content: flex-end;
+}
 
 
 
@@ -95,6 +98,7 @@ caption{
 }
 #detailscontent{
     display: flex;
+    
     width: 70rem;
     height: 30rem;
     justify-content: space-between;
