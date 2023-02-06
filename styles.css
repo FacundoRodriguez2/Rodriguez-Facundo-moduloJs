@@ -54,6 +54,24 @@ footer{
     align-items: center;
     background-color: lightgray;
 }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.card-img-top{
+    height: 10rem;
+}
+
+
 #social{
     display: flex;
     margin-top: 0.5rem;
