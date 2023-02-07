@@ -1,9 +1,68 @@
 const cards = document.getElementById("cards")
+const search=document.getElementById("formsec")
+const cate=document.getElementById("cate")
 let eventInfo = data.events
-let card=" "
+
+let cat=""
 
 
-for(let idInfo of eventInfo){
+const category= eventInfo.map(eventInfo => eventInfo.category)
+const onecategory= new Set(category)
+const arrcategory=[...onecategory]
+
+
+
+createCard(eventInfo)
+createCategory(arrcategory)
+
+
+
+search.addEventListener('input',(e)=>{
+  const searchinput = e.target.value.toLowerCase();
+  const cards= document.querySelectorAll(".card");
+  let thereIs = false;
+  cards.forEach(card => {
+    const name = card.querySelector(".card-title").innerText.toLowerCase();
+    if (name.startsWith(searchinput)) {
+    thereIs = true;
+    card.style.display = "block";
+    } else {
+    card.style.display = "none";
+    }
+});
+})
+cate.addEventListener('change',(e) =>{
+  let aux = filterCateCheck(eventInfo)
+  createCard(aux)
+})
+
+
+function filterCateCheck(e){
+  const checkedbox = [...document.querySelectorAll('input[type="checkbox"]:checked')].map(check=>check.value)
+  if(checkedbox.length===0){
+    return (e)
+  }
+  return e.filter(filtrados =>checkedbox.includes(filtrados.category))
+
+}
+
+
+
+
+
+function createCategory(arrcategory){
+for(let check of arrcategory){
+  cat +=`<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="${check}" value="${check}">
+  <label class="form-check-label" for="${check}">${check}</label>
+</div>`
+}
+cate.innerHTML = cat
+}
+
+function createCard (e){
+  let card=" "
+for(let idInfo of e){
     if(idInfo.date>data.currentDate){
         card.className ="card-info"
     card += `<div class="card" style="width: 18rem;">
@@ -21,3 +80,4 @@ for(let idInfo of eventInfo){
     }
 }
 cards.innerHTML = card
+}
