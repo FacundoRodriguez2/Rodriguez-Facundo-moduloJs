@@ -77,7 +77,7 @@ for(let idInfo of e){
       <p class="card-text"><strong>Description:</strong>${idInfo.description}</p>
       <div class="cardbottom">
         <p class="card-text"><strong>Price:</strong>$${idInfo.price}</p>
-        <a href="./pages/details.html" class="btn btn-primary">Go to details</a>
+        <a class="btn btn-primary" href="./pages/details.html?id=${idInfo._id}&name=${idInfo.name}">Go to details</a>
       </div>
     </div>
   </div>`
