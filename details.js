@@ -3,7 +3,7 @@ const params = new URLSearchParams(location.search)
 const id = params.get( "id" )
 const details= data.events.find(card=>card._id==id)
 const name=params.get("name")
-const aux = details.name.toUpperCase()+details.name.slice(1).toLowerCase()
+const aux = details.name.toUpperCase()
 document.title=`${aux}'s details`;
 
 
