@@ -22,8 +22,8 @@ main.innerHTML += `
 
 <div class="card mb-1" id="detailsCard">
   <div class="row g-0">
-    <div class="col-md-4">
-      <img src="${details.image}" class="img-fluid rounded-start" alt="..." id="imgdetails">
+    <div class="col-md-4" id="imagecontainer">
+      <img src="${details.image}" class="img-fluid rounded-start" alt="${details.name}" id="imgdetails">
     </div>
     <div class="col-md-8">
       <div class="card-body" id="detailstext">
