@@ -108,6 +108,7 @@ caption{
     background-color: lightgray;
     font-size: large;
     color: black;
+    text-align: center;
 }
 #maindetails{
     display: flex;
@@ -134,5 +135,10 @@ caption{
 #imgdetails{
     width: 38rem;
     height: 20rem;
+}
+#detailsCard{
+    width: 50rem;
+    height: 25rem;
+    border:2px solid black ;
 }
 

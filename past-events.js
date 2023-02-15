@@ -1,20 +1,65 @@
+import{createCard,createCategory,filterCateCheck,pastFilter,searching,printMessage}from'./module/functions.js'
 const cards = document.getElementById("cards")
 const search=document.getElementById("formsec")
 const cate=document.getElementById("cate")
-let eventInfo = data.events
-
-let cat=""
-
-const category= eventInfo.map(eventInfo => eventInfo.category)
-const onecategory= new Set(category)
-const arrcategory=[...onecategory]
-console.log(arrcategory)
+//let eventInfo = data.events
 
 
-createCard(eventInfo)
-createCategory(arrcategory)
+
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+    .then(res=>res.json())
+    .then((data)=>{
+      let eventInfo = data.events
+      const currdate=data.currentDate;
+      const category= eventInfo.map(eventInfo => eventInfo.category)
+      const onecategory= new Set(category)
+      const arrcategory=[...onecategory]
+      
+        createCard(pastFilter(eventInfo,currdate),cards)
+        createCategory(arrcategory,cate)
+        search.addEventListener('keyup',(e)=>{
+          let sea =search[0].value.toLowerCase();
+          let fill=searching(sea,pastFilter(eventInfo,currdate))
+          let filtercheck=filterCateCheck(fill)
+          printMessage(filtercheck,cards)
+        })
+        cate.addEventListener('change',(e) =>{
+          let sea =search[0].value.toLowerCase();
+          let fill=searching(sea,pastFilter(eventInfo,currdate))
+          let filtercheck=filterCateCheck(fill)
+          printMessage(filtercheck,cards)
+        })
+    })
+    .catch(err=>console.log(err));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 search.addEventListener('input',(e)=>{
   const searchinput = e.target.value.toLowerCase();
   const cards= document.querySelectorAll(".card");
@@ -34,8 +79,8 @@ cate.addEventListener('change',(e) =>{
   let aux = filterCateCheck(eventInfo)
   createCard(aux)
 })
-
-
+*/
+/*
 function filterCateCheck(e){
   const checkedbox = [...document.querySelectorAll('input[type="checkbox"]:checked')].map(check=>check.value)
   if(checkedbox.length===0){
@@ -78,4 +123,4 @@ for(let idInfo of e){
     }
 }
 cards.innerHTML = card
-}
+}*/

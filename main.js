@@ -1,36 +1,69 @@
-
-
+import{createCard,createCategory,filterCateCheck,searching,printMessage}from'./module/functions.js'
 
 const cards = document.getElementById("cards")
 const cate=document.getElementById("cate")
 const search=document.getElementById("formsec")
-let eventInfo = data.events
-
-let cat=" "
-
-
-const category= eventInfo.map(eventInfo => eventInfo.category)
-const onecategory= new Set(category)
-const arrcategory=[...onecategory]
+//let eventInfo = data.events
 
 
 
-createCard(eventInfo)
-createCategory(arrcategory)
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+    .then(res=>res.json())
+    .then((data)=>{
+      let eventInfo = data.events
+      const category= eventInfo.map(eventInfo => eventInfo.category)
+      const onecategory= new Set(category)
+      const arrcategory=[...onecategory]
+      createCard(eventInfo,cards)
+      createCategory(arrcategory,cate)
+
+      search.addEventListener('keyup',(e)=>{
+      let sea =search[0].value.toLowerCase();
+      let fill=searching(sea,eventInfo)
+      let filtercheck=filterCateCheck(fill)
+      printMessage(filtercheck,cards)
+      })
+
+      cate.addEventListener('change',(e) =>{
+      let sea =search[0].value.toLowerCase();
+      let fill=searching(sea,eventInfo)
+      let filtercheck=filterCateCheck(fill)
+      printMessage(filtercheck,cards)
+      })
+  })
+
+
+    .catch(err=>console.log(err));
+
+
+
+
+
+
+// search
+
+
+
+
+
+//for module
+//createCard(eventInfo,cards)
+
+
 // category
-
-function createCategory(arrcategory){
+/*
+function createCategory(arrcategory,element){
   for(let check of arrcategory){
     cat +=`<div class="form-check form-check-inline">
     <input class="form-check-input" type="checkbox" id="${check}" value="${check}">
     <label class="form-check-label" for="${check}">${check}</label>
   </div>`
   }
-  cate.innerHTML = cat
+  element.innerHTML = cat
   }
+*/
 
-
-// search
+/*
 search.addEventListener('input',(e)=>{
   const searchinput = e.target.value.toLowerCase();
   const cards= document.querySelectorAll(".card");
@@ -46,13 +79,9 @@ search.addEventListener('input',(e)=>{
 });
 })
 
+*/
 
-cate.addEventListener('change',(e) =>{
-  let aux = filterCateCheck(eventInfo)
-  createCard(aux)
-})
-
-
+/*
 function filterCateCheck(e){
   const checkedbox = [...document.querySelectorAll('input[type="checkbox"]:checked')].map(check=>check.value)
   if(checkedbox.length===0){
@@ -64,7 +93,7 @@ function filterCateCheck(e){
 
 
 
-function createCard (e){
+function createCard (e,element){
     let card=" " 
     for(let idInfo of e){
         card.className ="card-info"
@@ -81,8 +110,32 @@ function createCard (e){
         </div>
       </div>`
     }
-    cards.innerHTML = card
+    element.innerHTML = card
+}
+*/
+
+/*
+function createCard(eventInfo, cards){
+  cards.innerHTML = ''
+  let template = ''
+  for( let eve of eventInfo ){
+      template += crearCard(eve)
+  }
+  cards.innerHTML += template
+}
+function crearCard( eve ){
+  return`<div class="card" style="width: 18rem;">
+  <img src=${eve.image} class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${eve.name}</h5>
+    <p class="card-text"><strong>Date:</strong>${eve.date}</p>
+    <p class="card-text"><strong>Description:</strong>${eve.description}</p>
+    <div class="cardbottom">
+      <p class="card-text"><strong>Price:</strong>$${eve.price}</p>
+      <a class="btn btn-primary" href="./pages/details.html?id=${eve._id}&name=${eve.name}">Go to details</a>
+    </div>
+  </div>
+</div>`
 }
 
-
-
+*/
