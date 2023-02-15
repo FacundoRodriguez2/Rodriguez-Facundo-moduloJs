@@ -124,21 +124,22 @@ caption{
     align-items: center;
     border: 2px solid black;
 }
-#detailsimg{
+#imgdetails{
+    width: 55rem;
+    height: 24.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40rem;
-    height: 20rem;
-
-}
-#imgdetails{
-    width: 38rem;
-    height: 20rem;
 }
 #detailsCard{
-    width: 50rem;
+    width: 70rem;
     height: 25rem;
-    border:2px solid black ;
+   
+    display: flex;
+    justify-content: space-between;
+}
+#imagecontainer{
+    
+
 }
 
